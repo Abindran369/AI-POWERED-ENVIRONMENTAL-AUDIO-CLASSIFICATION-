@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizations</title>
+    <style>
+        body {
+            background: url("{{ url_for('static', filename='background.png') }}") no-repeat center center fixed;
+            background-size: cover;
+            backdrop-filter: blur(5px);
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .section {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            width: 80%;
+            text-align: center;
+        }
+
+        .section img {
+            width: 60%;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Visualizations</h1>
+    
+    <div class="container">
+        <div class="section">
+            <h2>EDA</h2>
+            <img src="{{ url_for('static', filename='visualization/EDA/waveform.png') }}" alt="Waveform">
+            <img src="{{ url_for('static', filename='visualization/EDA/spectogram.png') }}" alt="Spectrogram">
+            <img src="{{ url_for('static', filename='visualization/EDA/DataFrame.png') }}" alt="DataFrame">
+            <img src="{{ url_for('static', filename='visualization/EDA/class_distribution.png') }}" alt="Class Distribution">
+            <img src="{{ url_for('static', filename='visualization/EDA/fold_distribution.png') }}" alt="Fold Distribution">
+        </div>
+
+        <div class="section">
+            <h2>Feature Extraction</h2>
+            <img src="{{ url_for('static', filename='visualization/Feature Extraction/2d.png') }}" alt="2D Feature">
+            <img src="{{ url_for('static', filename='visualization/Feature Extraction/mel spectogram.png') }}" alt="Mel Spectrogram">
+        </div>
+
+        <div class="section">
+            <h2>Models</h2>
+            <img src="{{ url_for('static', filename='visualization/Models/modelaccuracy1.png') }}" alt="Model Accuracy 1">
+            <img src="{{ url_for('static', filename='visualization/Models/confusionMatrix1.png') }}" alt="Confusion Matrix 1">
+            <img src="{{ url_for('static', filename='visualization/Models/heatmap.png') }}" alt="Heatmap 1">
+            <img src="{{ url_for('static', filename='visualization/Models/modelaccuracy2.png') }}" alt="Model Accuracy 2">
+            <img src="{{ url_for('static', filename='visualization/Models/confMatrix2.png') }}" alt="Confusion Matrix 2">
+            <img src="{{ url_for('static', filename='visualization/Models/heatmap2.png') }}" alt="Heatmap 2">
+        </div>
+
+        <div class="section">
+            <h2>Comparison</h2>
+            <p>No visualizations available yet.</p>
+        </div>
+    </div>
+</body>
+</html>
